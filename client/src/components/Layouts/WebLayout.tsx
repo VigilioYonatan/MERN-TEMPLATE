@@ -16,7 +16,7 @@ const WebLayout = () => {
                     />
                 </a>
             </div>
-            <h1>Vite + React</h1>
+            <h1 className="text-indigo-500 my-custom-style">Vite + React</h1>
             <Outlet />
         </div>
     );

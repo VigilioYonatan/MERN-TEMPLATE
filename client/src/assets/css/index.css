@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*https://tailwindcss.com/docs/adding-custom-styles*/
+@layer components {
+    .my-custom-style {
+        border: 2px solid;
+    }
+}
