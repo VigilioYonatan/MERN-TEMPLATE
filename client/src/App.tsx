@@ -1,20 +1,16 @@
 import { Suspense } from "react";
-import { QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { QueryClient } from "@tanstack/react-query";
+import { Provider } from "react-redux";
 import Web from "~/app/Web";
 import "./App.css";
-
-const client = new QueryClient();
+import { store } from "~/app/store/store";
 
 const App = () => {
     return (
         <Suspense fallback={<h1>Cargandoo...</h1>}>
-            <QueryClientProvider client={client}>
+            <Provider store={store}>
                 {/* Providers */}
                 <Web />
-                <ReactQueryDevtools position="bottom-right" initialIsOpen />
-            </QueryClientProvider>
+            </Provider>
         </Suspense>
     );
 };
